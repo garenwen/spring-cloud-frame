@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 
-@FeignClient(value = "order-server")
+@FeignClient(value = "order-server",fallback = SchedulerOrderServiceHystrix.class)
 public interface SchedulerOrderService {
     @RequestMapping(value = "/order",method = RequestMethod.POST)
     String buyFromClientOne(@RequestParam(value = "price") double price,@RequestParam(value = "product") String product,@RequestParam(value = "count") int count);

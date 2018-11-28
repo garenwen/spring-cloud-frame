@@ -32,6 +32,8 @@
         <module>eurake-server</module>
         <module>order-server</module>
         <module>feign-server</module>
+        <module>config-server</module>
+        <module>config-client</module>
     </modules>
 
 

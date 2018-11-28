@@ -1,0 +1,5 @@
+spring:
+  name: config-client
+  profile: dev
+  uri: http://localhost:8001/
+  label: master

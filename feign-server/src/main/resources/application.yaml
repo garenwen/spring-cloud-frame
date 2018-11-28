@@ -3,7 +3,10 @@ spring:
     name: feign-server
 logging:
   level:
-    org.springframework.cloud.openfeign: DEBUG
+    org.springframework.cloud.feign: DEBUG
+feign:
+  hystrix:
+    enabled: true
 ---
 eureka:
   instance:
