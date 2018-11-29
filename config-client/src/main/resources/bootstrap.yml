@@ -1,5 +1,7 @@
 spring:
-  name: config-client
-  profile: dev
-  uri: http://localhost:8001/
-  label: master
+  cloud:
+    config:
+      name: config
+      profile: dev
+      uri: http://localhost:8767/
+      label: master
