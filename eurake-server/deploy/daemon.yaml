@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  labels:
+    system: spring-cloud
+    service: eurake-server
+  name: spring-cloud-eurake-server
+  namespace: spring-cloud
+spec:
+  template:
+    metadata:
+      labels:
+        system: spring-cloud
+        service: eurake-server
+    spec:
+      containers:
+      - name: spring-cloud-eurake-server
+        resources:
+          limits:
+            memory: 400Mi
+          requests:
+            cpu: 100m
+            memory: 200Mi
+        image: registry.corp.ucarinc.com/infrastructure/eurake-server:1.0-SNAPSHOT
+        ports:
+        - containerPort: 8700
+
+
