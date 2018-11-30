@@ -1,0 +1,13 @@
+server:
+  port: 8720
+eureka:
+  instance:
+    hostname: k8s04
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8700/eureka/
+
+
+
